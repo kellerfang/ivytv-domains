@@ -1,0 +1,9 @@
+{
+  "domains": [
+    "https://ivytv.cc",
+    "https://luyaka.com",
+    "https://nidtv.com"
+  ],
+  "updated": "2026-11-04T15:20:00+08:00",
+  "note": "APK 启动时会读这份列表（jsDelivr / GitHub raw 双通道）。换域名、加域名、主域被封，只改这里并 commit，已发布的 APK 立刻生效，不需要重新打包。顺序 = 优先级。"
+}

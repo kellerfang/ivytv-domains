@@ -2,8 +2,9 @@
   "domains": [
     "https://ivytv.cc",
     "https://luyaka.com",
-    "https://nidtv.com"
+    "https://nidtv.com",
+    "https://de.nidtv.com"
   ],
-  "updated": "2026-11-04T15:28:00+08:00",
-  "note": "APK 启动时会读这份列表（jsDelivr / GitHub raw 双通道）。换域名、加域名、主域被封，只改这里并 commit，已发布的 APK 立刻生效，不需要重新打包。顺序 = 优先级。"
+  "updated": "2026-11-10T12:22:00+08:00",
+  "note": "APK 启动读这份列表。通道顺序：腾讯云 COS（国内锚点）> GitHub raw > jsDelivr。换域名、加域名、主域被封，只改这里并重新上传，已发布 APK 不需要重新打包。数组顺序 = 优先级。第 4 域 de.nidtv.com 是 CF 橙云→德国 standby 的逃生入口（2026-11-10 实测 200）。"
 }

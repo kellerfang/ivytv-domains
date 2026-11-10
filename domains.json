@@ -1,11 +1,11 @@
 {
   "domains": [
     "https://ivytv.cc",
-    "https://luyaka.com",
     "https://nidtv.com",
     "https://de.nidtv.com",
+    "https://luyaka.com",
     "https://ivytv.xyz"
   ],
-  "updated": "2026-11-10T21:25:00+08:00",
-  "note": "APK 启动读这份列表。通道顺序：腾讯云 COS（国内锚点）> GitHub raw > jsDelivr。换域名、加域名、主域被封，只改这里并重新上传，已发布 APK 不需要重新打包。数组顺序 = 优先级。第 4 域 de.nidtv.com 是 CF 橙云→德国 standby 的逃生入口；第 5 域 ivytv.xyz 是落地方案里点名的独立 TLD 备用域，2026-11-10 已补签证书并实测 200，放在末位不改变原有四域优先级。"
+  "updated": "2026-11-10T23:30:00+08:00",
+  "note": "APK 启动读这份列表。通道顺序：腾讯云 COS（国内锚点）> GitHub raw > jsDelivr；COS 返回成功即采用，不再读后两条。数组顺序 = 优先级。第 2 域 nidtv.com 经 CF 橙云直达 133:443 独立后门（200 边缘故障时仍进主站）；第 3 域 de.nidtv.com 经 CF 直达德国 3002（133 故障时 HA agent 自动提升本地库接管）；luyaka.com / ivytv.xyz 为灰云备用域。2026-11-10 多入口收口重排，已发布 APK 不需要重新打包。"
 }

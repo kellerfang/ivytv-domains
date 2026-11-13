@@ -2,12 +2,13 @@
   "domains": [
     "https://ivytv.cc",
     "https://jp.ivytv.cc",
+    "https://sg.ivytv.cc",
     "https://de2.ivytv.cc:8443",
     "https://nidtv.com",
     "https://de.nidtv.com",
     "https://luyaka.com",
     "https://ivytv.xyz"
   ],
-  "updated": "2026-11-12T21:20:00+08:00",
-  "note": "第 1-3 位是同一个注册域（ivytv.cc），会话 cookie 带 Domain=.ivytv.cc，彼此切换不需要重新登录。jp.ivytv.cc 走 AWS 东京灰云直连，大陆约 105ms，回源 133 仅 3ms；de2.ivytv.cc:8443 走德国 8443（德国 443 对外不通，端口不能省）。第 4-7 位是异注册域（nidtv.com / de.nidtv.com 经 Cloudflare，luyaka.com / ivytv.xyz 灰云），浏览器物理上无法共享会话 cookie，切过去必须重登，只作「域名被封」时的最后一条活路。数组顺序 = 优先级。客户端先挑与当前页同注册域的候选，同域全不通才用后面的。"
+  "updated": "2026-11-13T11:30:00+08:00",
+  "note": "前 3 位（ivytv.cc / jp.ivytv.cc / sg.ivytv.cc）与第 4 位 de2.ivytv.cc:8443 同属注册域 ivytv.cc，会话 cookie 带 Domain=.ivytv.cc，彼此切换不需要重新登录。jp 走 AWS 东京灰云直连（家宽 122ms，回源 133 约 3ms）；sg 走 AWS 新加坡 Caddy 反代 133:443（家宽 TTFB 0.70s）；de2 走德国 8443（德国 443 对外不通，端口不能省，家宽 TTFB 1.22s）。后 4 位是异注册域（nidtv.com / de.nidtv.com 经 Cloudflare，luyaka.com / ivytv.xyz 灰云），浏览器物理上无法共享会话 cookie，切过去必须重登，只作「域名被封」时的最后一条活路。数组顺序是基础优先级；客户端运行时先按「同注册域优先」分组，再按实测 RTT 挑最快可达的候选。2026-11-13 起加入 SG 并把运行期健康检查超时从 2s 放宽到 5s（实测 >2s 常态尖峰占 8.75%、>5s 为 0），避免把「只是慢」误判成「域名被封」。"
 }
